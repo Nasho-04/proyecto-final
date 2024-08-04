@@ -1,0 +1,38 @@
+.carta-entorno {
+    border-radius: 16px;
+    background-color: #73a3b3;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    width: 100%;
+    border: 1px solid #000;
+    box-shadow: 0px 0px 4px 0px #000;
+}
+
+.info-carta-entorno {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 15px;
+    height: 60px;
+    align-items: center;
+    color: #000;
+}
+
+.btn-entrar {
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    border: solid 1px #000;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: #be58cf;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 4px 0px #000;
+}

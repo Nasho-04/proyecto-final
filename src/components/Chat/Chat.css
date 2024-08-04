@@ -1,0 +1,86 @@
+.chat {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor-mensajes {
+    width: 100%;
+    height: 80%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: #690257;
+    gap: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: #73a3b3 transparent;
+}
+
+
+.contenedor-input-mensajes{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    position: relative;
+    background-color: #460066;
+    border-top: 2px solid #000;
+}
+
+.contenedor-input-mensajes input {
+    width: 90%;
+    height: 70%;
+    background-color: #690257;
+    border-radius: 10px;
+    border: 1px solid #fefefe;
+    box-shadow: 0px 0px 2px 0px #000;
+    color: #fefefe;
+    font-size: 20px;
+    padding: 0 200px 0 10px;
+}
+
+.contenedor-input-mensajes input:focus {
+    outline: none;
+    border: 2px solid #fefefe;
+}
+
+.contenedor-input-mensajes input::placeholder {
+    color: #bcbcbc;
+}
+
+.contenedor-btn-enviar{
+    position: absolute;
+    left: 85%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-left: 1px solid #fefefe;
+    width: 150px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.btn-enviar-mensaje{
+    height: 60px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: #460066;
+    color: #fefefe;
+    outline: none;
+    border: 1px solid #fefefe;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0px 0px 2px 0px #000;
+}
+
+.btn-enviar-mensaje:hover {
+    cursor: pointer;
+    border: 2px solid #fefefe;
+}

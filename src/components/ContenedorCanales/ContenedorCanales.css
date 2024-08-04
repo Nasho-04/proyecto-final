@@ -1,0 +1,105 @@
+.contenedor-canales {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px 20px;
+    gap: 7px;
+}
+
+.titulo-canales {
+    width: 100%;
+    height: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #000000;
+    border-bottom: #000 1px solid;
+}
+
+.lista-canales {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5px;
+    list-style: none;
+}
+
+.link-canal {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    width: 100%;
+    display: flex;
+    gap: 2px;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+.link-canal:hover {
+    background-color: #5b8c9d;
+}
+
+.link-canal::before {
+    content: '#';
+}
+
+.contenedor-crear-canal {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid #000;
+}
+
+.form-crear-canal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+.form-crear-canal input {
+    width: 100%;
+    height: 30px;
+    border: #000 1px solid;
+    border-radius: 5px;
+    padding: 0px 5px;
+}
+
+.form-crear-canal button {
+    width: 100%;
+    height: 20px;
+    border: #000 1px solid;
+    border-radius: 5px;
+    padding: 0px 5px;
+}
+
+.btn-confirmar-canal {
+    background-color: #690257;
+    color: #fefefe;
+    border: 1px solid #fefefe;
+}
+
+.btn-cancelar-canal {
+    background-color: inherit;
+    color: #000;
+}
+
+.btn-crear-canal {
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    outline: none;
+    border: none;
+    color: #000;
+    font-size: 16px;
+}

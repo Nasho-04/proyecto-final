@@ -1,0 +1,35 @@
+.contenedor-mensaje {
+    display: flex;
+    flex-direction: column;
+    box-sizing: content-box;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #444;
+    color: #fefefe;
+    font-size: 17px;
+    gap: 10px;
+}
+
+.contenedor-mensaje:hover {
+    background-color: #555;
+}
+
+.info-mensaje {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+    height: 20px;
+    color: #fefefe;
+    align-items: center;
+}
+
+.autor-mensaje {
+    font-weight: bold;
+}
+
+.fecha-mensaje {
+    font-size: .9rem;
+    opacity: .8;
+}
