@@ -23,7 +23,7 @@ h1 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 45px;
+    gap: 30px;
 }
 
 .lista-entornos {
@@ -39,7 +39,7 @@ h1 {
     background-color: inherit;
     box-shadow: 0px 0px 10px 0px #000;
     scrollbar-width: thin;
-    scrollbar-color: transparent transparent;
+    scrollbar-color: #460066 transparent;
 }
 
 .contenedor-entornos {
@@ -57,6 +57,7 @@ h1 {
     text-align: left;
     opacity: 0.8;
     color: #ccc;
+    text-shadow: 0px 0px 10px #fff;
 }
 
 .btn-crear-entorno {
@@ -77,3 +78,97 @@ h1 {
     box-shadow: 0px 0px 10px 0px #000;
 }
 
+@media screen and (max-width: 800px) {
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .contenedor-entornos {
+        width: 100%;
+    }
+
+    .btn-crear-entorno {
+        height: 50px;
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .lista-entornos {
+        height: 300px;
+        padding: 10px 10px;
+    }
+
+    .btn-crear-entorno {
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .subtitulo {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+
+    .contenedor-entornos {
+        height: 600px;
+    }
+
+    h1 {
+        font-size: 65px;
+    }
+
+    .lista-entornos {
+        width: 80%;
+        height: 450px;
+    }
+
+    .btn-crear-entorno {
+        height: 60px;
+        font-size: 30px;
+        width: 80%;
+    }
+
+    .subtitulo {
+        font-size: 25px;
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 1700px) {
+    .contenedor-entornos {
+        height: 700px;
+    }
+
+    h1 {
+        font-size: 70px;
+        text-shadow: 0px 0px 50px #000;
+    }
+
+    .lista-entornos {
+        height: 500px;
+        width: 90%;
+        border-radius: 25px;
+        box-shadow: 0px 0px 20px 0px #000;
+    }
+
+    .btn-crear-entorno {
+        height: 70px;
+        font-size: 45px;
+        width: 90%;
+        border-radius: 20px;
+        box-shadow: 0px 0px 20px 0px #000;
+    }
+
+    .subtitulo {
+        font-size: 30px;
+        width: 90%;
+        text-shadow: 0px 0px 20px #fff;
+    }
+}

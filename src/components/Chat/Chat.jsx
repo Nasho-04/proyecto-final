@@ -2,11 +2,10 @@ import React, { useEffect } from 'react'
 import './Chat.css'
 import { useState } from 'react'
 import Mensaje from '../Mensaje/Mensaje'
-import { useGlobalContext } from '../../GlobalContext'
 
 const Chat = (props) => {
 
-    const { inputValue, setInputValue } = useGlobalContext()
+    const [inputValue, setInputValue] = useState('')
 
     const { canal } = props
     const [mensajes, setMensajes] = useState(canal.mensajes)

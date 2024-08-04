@@ -17,6 +17,7 @@
     gap: 10px;
     scrollbar-width: thin;
     scrollbar-color: #73a3b3 transparent;
+    flex-grow: 1;
 }
 
 
@@ -29,7 +30,7 @@
     padding: 1rem;
     position: relative;
     background-color: #460066;
-    border-top: 2px solid #000;
+    border-top: 1px solid #fefefe;
 }
 
 .contenedor-input-mensajes input {
@@ -60,7 +61,7 @@
     transform: translate(-50%, -50%);
     border-left: 1px solid #fefefe;
     width: 150px;
-    height: 60px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,8 +69,8 @@
 }
 
 .btn-enviar-mensaje{
-    height: 60px;
-    width: 100px;
+    height: 100%;
+    width: 75%;
     border-radius: 10px;
     background-color: #460066;
     color: #fefefe;
@@ -83,4 +84,103 @@
 .btn-enviar-mensaje:hover {
     cursor: pointer;
     border: 2px solid #fefefe;
+}
+
+@media screen and (max-width: 1000px) {
+    .contenedor-input-mensajes {
+        height: 15%;
+    }
+
+    .contenedor-input-mensajes input {
+        padding: 0 120px 0 10px;
+        font-size: 17px;
+    }
+
+    .contenedor-btn-enviar {
+        width: 100px;
+        height: 30px;
+    }
+
+    .btn-enviar-mensaje {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .contenedor-input-mensajes {
+        height: 15%;
+    }
+
+    .contenedor-input-mensajes input {
+        font-size: 15px;
+    }
+
+    .contenedor-btn-enviar {
+        left: 83%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contenedor-input-mensajes input {
+        padding: 0 100px 0 10px;
+    }
+
+    .contenedor-btn-enviar {
+        left: 81%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .contenedor-input-mensajes {
+        height: 13%;
+    }
+    .contenedor-input-mensajes input {
+        padding: 0 100px 0 10px;
+        font-size: 13px;
+    }
+
+    .contenedor-btn-enviar {
+        left: 79%;
+        width: 80px;
+        height: 25px;
+    }
+
+    .btn-enviar-mensaje {
+        font-size: 13px;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .contenedor-input-mensajes input {
+        height: 50%;
+        font-size: 22px;
+        padding: 0 170px 0 10px;
+    }
+
+    .contenedor-btn-enviar {
+        width: 140px;
+        height: 50px;
+        left: 87%;
+    }
+}
+
+@media screen and (min-width: 1800px) {
+    .contenedor-input-mensajes input {
+        font-size: 28px;
+        padding: 0 160px 0 10px;
+    }
+
+    .contenedor-input-mensajes {
+        border-top: 2px solid #fefefe;
+    }
+
+    .contenedor-btn-enviar {
+        width: 150px;
+        height: 60px;
+        left: 89%;
+    }
+
+    .btn-enviar-mensaje {
+        font-size: 25px;
+    }
 }

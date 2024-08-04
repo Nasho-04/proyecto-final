@@ -26,7 +26,7 @@ const ContenedorCanales = (props) => {
             <h4 className='titulo-canales'>Canales</h4>
             <ul className='lista-canales'>
                 {canales.map((canal) => (
-                    <Link className='link-canal' to={`/entorno/${entorno.id}/${canal.id}`}><li key={canal.id}>{canal.nombre}</li></Link>
+                    <Link key={canal.id} className='link-canal' to={`/entorno/${entorno.id}/${canal.id}`}><li key={canal.id}>{canal.nombre}</li></Link>
                 ))}
             </ul>
             <div className='contenedor-crear-canal'>{condicionBtn

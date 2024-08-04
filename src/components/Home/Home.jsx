@@ -1,13 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Home.css'
-import { GlobalContextProvider, useGlobalContext } from '../../GlobalContext'
+import { useGlobalContext } from '../../GlobalContext'
 import CartaEntorno from '../CartaEntorno/CartaEntorno'
-import { useContext } from 'react'
-import ENTORNOS from '../../data'
 import { Link } from 'react-router-dom'
 
 const Home = () => {
-    const {entornos} = useGlobalContext()
+    const { setEntorno, ENTORNO } = useGlobalContext()
+
+
+    useEffect(() => {
+        setEntorno(ENTORNO)
+    }, [ENTORNO])
 
 
     return (
@@ -16,7 +19,7 @@ const Home = () => {
             <div className='contenedor-entornos'>
                 <span className='subtitulo'>Entornos de trabajo</span>
                 <div className='lista-entornos'>
-                    {entornos.map((entorno) => (
+                    {ENTORNO.map((entorno) => (
                         <CartaEntorno key={entorno.id} entorno={entorno} />
                     ))}
                 </div>

@@ -27,9 +27,113 @@
 
 .autor-mensaje {
     font-weight: bold;
+    font-size: 1.1rem;
 }
 
 .fecha-mensaje {
     font-size: .9rem;
     opacity: .8;
+}
+
+.texto-mensaje {
+    white-space: pre-wrap;
+    text-wrap: balance;
+    overflow-wrap: break-word;
+    font-size: 1.2rem;
+}
+
+@media screen and (min-width: 1600px) {
+    .contenedor-mensaje {
+        font-size: 20px;
+    }
+
+    .autor-mensaje {
+        font-size: 1.3rem;
+    }
+
+    .fecha-mensaje {
+        font-size: 1.1rem;
+    }
+
+    .texto-mensaje {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (min-width: 1900px) {
+    .contenedor-mensaje {
+        font-size: 22px;
+    }
+
+    .autor-mensaje {
+        font-size: 1.5rem;
+    }
+
+    .fecha-mensaje {
+        font-size: 1.3rem;
+    }
+
+    .texto-mensaje {
+        font-size: 1.6rem;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .contenedor-mensaje {
+        font-size: 16px;
+        gap: 2px;
+        padding: 5px;
+    }
+
+    .autor-mensaje {
+        font-size: .9rem;
+    }
+
+    .fecha-mensaje {
+        font-size: .8rem;
+    }
+
+    .texto-mensaje {
+        font-size: 1rem;
+    }
+
+    .info-mensaje {
+        gap: 7px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .contenedor-mensaje {
+        font-size: 14px;
+    }
+
+    .autor-mensaje {
+        font-size: .7rem;
+    }  
+
+    .fecha-mensaje {
+        font-size: .6rem;
+    }  
+
+    .texto-mensaje {
+        font-size: .8rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .contenedor-mensaje {
+        font-size: 12px;
+    }
+
+    .autor-mensaje {
+        font-size: .6rem;
+    }
+
+    .fecha-mensaje {
+        font-size: .5rem;
+    }
+
+    .texto-mensaje {
+        font-size: .7rem;
+    }
 }

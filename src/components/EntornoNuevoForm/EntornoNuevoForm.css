@@ -41,13 +41,13 @@
 
 .input-entorno-nuevo {
     width: 90%;
-    height: 50px;
+    height: 60px;
     border-radius: 10px;
     border: 2px solid #fff;
     padding: 10px;
     outline: none;
     background-color: inherit;
-    font-size: 16px;
+    font-size: 20px;
     color: #fff;
 }
 
@@ -99,4 +99,146 @@
 .link-cancelar-entorno {
     text-decoration: none;
     cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+    .contenedor-formulario {
+        width: 65%;
+        height: 350px;
+    }
+
+    .titulo-entorno-nuevo-form {
+        font-size: 30px;
+    }
+
+    .input-entorno-nuevo {
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .btn-cancelar-entorno {
+        height: 50px;
+        font-size: 16px;
+        width: 120px;
+    }
+
+    .btn-submit-entorno {
+        height: 50px;
+        font-size: 16px;
+        width: 120px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    .contenedor-formulario {
+        width: 80%;
+        height: 300px;
+    }
+
+    .titulo-entorno-nuevo-form {
+        font-size: 25px;
+    }
+
+    .input-entorno-nuevo {
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .btn-cancelar-entorno {
+        font-size: 14px;
+        width: 100px;
+    }
+
+    .btn-submit-entorno {
+        font-size: 14px;
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .contenedor-formulario {
+        width: 90%;
+        height: 250px;
+    }
+
+    .form-entorno-nuevo {
+        gap: 15px;
+    }
+
+    .titulo-entorno-nuevo-form {
+        font-size: 23px;
+    }
+
+    .btn-cancelar-entorno {
+        font-size: 12px;
+        height: 45px;
+        width: 80px;
+    }
+
+    .btn-submit-entorno {
+        font-size: 12px;
+        height: 45px;
+        width: 80px;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+
+    .contenedor-formulario {
+        width: 55%;
+        height: 400px;
+        gap: 30px;
+    }
+
+    .titulo-entorno-nuevo-form {
+        font-size: 45px;
+    }
+
+    .btn-cancelar-entorno {
+        font-size: 22px;
+        width: 170px;
+        height: 70px;
+    }
+
+    .btn-submit-entorno {
+        font-size: 22px;
+        width: 170px;
+        height: 70px;
+    }
+}
+
+@media screen and (min-width: 1800px) {
+
+    .contenedor-formulario {
+        width: 50%;
+        height: 500px;
+        gap: 40px;
+    }
+
+    .titulo-entorno-nuevo-form {
+        font-size: 55px;
+    }
+
+    .input-entorno-nuevo {
+        height: 70px;
+        font-size: 24px;
+    }
+
+    .btn-cancelar-entorno {
+        font-size: 24px;
+        width: 200px;
+        height: 80px;
+    }
+
+    .btn-submit-entorno {
+        font-size: 24px;
+        width: 200px;
+        height: 80px;
+    }
+
+    .form-entorno-nuevo {
+        gap: 70px;
+    }
 }
