@@ -1,10 +1,12 @@
+import { v4 as uuid } from 'uuid';
+
 const ENTORNOS = [
     {
-        id: 1,
+        id: uuid(),
         nombre: 'Entorno 1',
         canales: [
             {
-                id: 1,
+                id: uuid(),
                 nombre: 'General',
                 mensajes: [
                     {
@@ -20,7 +22,7 @@ const ENTORNOS = [
                 ]
             },
             {
-                id: 2,
+                id: uuid(),
                 nombre: 'Trabajo',
                 mensajes: [
                     {
@@ -43,11 +45,11 @@ const ENTORNOS = [
         ]
     },
     {
-        id: 2,
+        id: uuid(),
         nombre: 'Entorno 2',
         canales: [
             {
-                id: 1,
+                id: uuid(),
                 nombre: 'General',
                 mensajes: [
                     {

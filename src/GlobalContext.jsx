@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import ENTORNOS from "./data";
 import { obtenerEntornos, obtenerCanales } from "./data";
+import {v4 as uuid} from 'uuid';
 
 const GlobalContext = createContext();
 
@@ -17,7 +18,7 @@ export const GlobalContextProvider = ({ children }) => {
 
     const agregarEntorno = (nombre) => {
         const nuevoEntorno = {
-            id: ENTORNO.length + 1,
+            id: uuid(),
             nombre: nombre,
             canales: [
                 {
@@ -39,11 +40,15 @@ export const GlobalContextProvider = ({ children }) => {
         setCondicionMenu(!condicionMenu)
     }
 
+    const actualizarEntornos = () => {
+        setEntorno([...ENTORNO])
+    }
+
 
     return (
         <GlobalContext.Provider value={
             {
-                entornos: entornos, 
+                entornos: entornos,
                 condicionBtn: condicionBtn,
                 setCondicionBtn: setCondicionBtn,
                 ENTORNO: ENTORNO,
@@ -53,7 +58,8 @@ export const GlobalContextProvider = ({ children }) => {
                 handleToggleCondicion: handleToggleCondicion,
                 agregarEntorno: agregarEntorno,
                 condicionMenu: condicionMenu,
-                handleToggleMenu: handleToggleMenu
+                handleToggleMenu: handleToggleMenu,
+                actualizarEntornos: actualizarEntornos
             }
         }>
             {children}

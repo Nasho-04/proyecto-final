@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './ContenedorCanales.css'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { useState } from 'react'
 import { useGlobalContext } from '../../GlobalContext'
+import { v4 as uuid } from 'uuid';
+import Canal from '../Canal/Canal'
 
 const ContenedorCanales = (props) => {
     const { condicionBtn, setCondicionBtn, inputValue, setInputValue, handleToggleCondicion } = useGlobalContext()
@@ -13,7 +15,7 @@ const ContenedorCanales = (props) => {
     const handleSubmitCanales = (e) => {
         e.preventDefault()
         if (inputValue !== '') {
-            const nuevoCanal = { id: canales.length + 1, nombre: inputValue, mensajes: [] }
+            const nuevoCanal = { id: uuid(), nombre: inputValue, mensajes: [] }
             entorno.canales.push(nuevoCanal)
             setCanales(entorno.canales)
             setCondicionBtn(!condicionBtn)
@@ -21,12 +23,16 @@ const ContenedorCanales = (props) => {
         }
     }
 
+    useEffect(() => {
+        setCanales(entorno.canales)
+    }, [entorno])
+
     return (
         <div className='contenedor-canales'> 
             <h4 className='titulo-canales'>Canales</h4>
             <ul className='lista-canales'>
                 {canales.map((canal) => (
-                    <Link key={canal.id} className='link-canal' to={`/entorno/${entorno.id}/${canal.id}`}><li key={canal.id}>{canal.nombre}</li></Link>
+                    <Canal key={canal.id} canal={canal} entorno={entorno}/>
                 ))}
             </ul>
             <div className='contenedor-crear-canal'>{condicionBtn

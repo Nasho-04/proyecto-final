@@ -47,6 +47,12 @@
     background-color: #5b8c9d;
 }
 
+.contenedor-canal:hover > .btn-eliminar-canal {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
 .link-canal::before {
     content: '#';
 }
@@ -91,14 +97,40 @@
     padding: 0px 5px;
 }
 
+.contenedor-canal {
+    position: relative;
+    width: 100%;
+}
+
+.btn-eliminar-canal {
+    position: absolute;
+    right: 5px;
+    top: 0;
+    background-color: inherit;
+    border: none;
+    color: rgb(167, 1, 1);
+    font-size: 18px;
+    cursor: pointer;
+    display: none;
+    transition: .4s;
+    height: 100%;
+    width: 25px;
+}
+
+.btn-eliminar-canal:hover {
+    background-color: #5b8c9d;
+}
+
 .btn-confirmar-canal {
     background-color: #690257;
     color: #fefefe;
+    cursor: pointer;
 }
 
 .btn-cancelar-canal {
     background-color: inherit;
     color: #000;
+    cursor: pointer;
 }
 
 .btn-crear-canal {
@@ -109,6 +141,7 @@
     border: none;
     color: #000;
     font-size: 16px;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {

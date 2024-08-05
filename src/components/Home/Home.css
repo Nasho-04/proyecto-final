@@ -30,7 +30,7 @@ h1 {
     border: 1px solid #fff;
     border-radius: 16px;
     padding: 10px 15px;
-    width: 60%;
+    width: 65%;
     height: 350px;
     display: flex;
     flex-direction: column;
@@ -52,7 +52,7 @@ h1 {
 
 .subtitulo{
     font-size: 20px;
-    width: 60%;
+    width: 65%;
     margin-left: 15px;
     text-align: left;
     opacity: 0.8;
@@ -61,7 +61,7 @@ h1 {
 }
 
 .btn-crear-entorno {
-    width: 60%;
+    width: 65%;
     height: 70px;
     border-radius: 10px;
     border: solid 1px #ffffff;
@@ -78,7 +78,30 @@ h1 {
     box-shadow: 0px 0px 10px 0px #000;
 }
 
+
+@media screen and (max-width: 1000px) {
+    .lista-entornos {
+        width: 80%;
+    }
+
+    .btn-crear-entorno {
+        width: 80%;
+    }
+
+    .subtitulo {
+        width: 80%;
+    }
+}
+
 @media screen and (max-width: 800px) {
+    .lista-entornos {
+        width: 70%;
+    }
+
+    .subtitulo {
+        font-size: 18px;
+        width: 70%;
+    }
 
     h1 {
         font-size: 40px;
@@ -91,6 +114,7 @@ h1 {
     .btn-crear-entorno {
         height: 50px;
         font-size: 25px;
+        width: 70%;
     }
 }
 
@@ -98,15 +122,18 @@ h1 {
     .lista-entornos {
         height: 300px;
         padding: 10px 10px;
+        width: 80%;
     }
 
     .btn-crear-entorno {
         height: 40px;
         font-size: 20px;
+        width: 80%;
     }
 
     .subtitulo {
         font-size: 15px;
+        width: 80%;
     }
 
     h1 {
