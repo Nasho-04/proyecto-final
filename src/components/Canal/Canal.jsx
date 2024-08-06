@@ -1,20 +1,34 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useGlobalContext } from '../../GlobalContext'
+import { useNavigate } from 'react-router-dom'
 
 const Canal = (props) => {
+
+    const {ENTORNO, actualizarEntornos} = useGlobalContext()
+
+    const navigate = useNavigate()
 
     const { canal, entorno } = props
 
     const handleEliminarCanal = () => {
         const canalBuscado = entorno.canales.findIndex(canal => canal.id === props.canal.id)
         entorno.canales.splice(canalBuscado, 1)
-        console.log(entorno.canales)
+        const entornoStorage = ENTORNO.find(entorno => entorno.id === props.entorno.id)
+        entornoStorage.canales = entorno.canales
+        actualizarEntornos()
+        localStorage.setItem('entornos', JSON.stringify(ENTORNO))
+        navigate(`/`)
     }
 
     return (
         <div className='contenedor-canal'>
             <Link key={canal.id} className='link-canal' to={`/entorno/${entorno.id}/${canal.id}`}><li key={canal.id}>{canal.nombre}</li></Link>
-            <span onClick={handleEliminarCanal} className='btn-eliminar-canal'><i className='bi bi-trash'></i></span>
+            {canal.nombre === 'General' 
+            ? <></>
+            :<span onClick={handleEliminarCanal} className='btn-eliminar-canal'><i className='bi bi-trash'></i></span>
+            }
+            
         </div>
     )
 }

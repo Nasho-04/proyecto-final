@@ -5,12 +5,14 @@ import { useGlobalContext } from '../../GlobalContext'
 
 const CartaEntorno = (props) => {
     const { entorno } = props
-    const { ENTORNO, actualizarEntornos } = useGlobalContext()
+    const { setEntorno } = useGlobalContext()
 
     const handleEliminarEntorno = () => {
-        const entornoBuscado = ENTORNO.findIndex(entorno => entorno.id === props.entorno.id)
-        ENTORNO.splice(entornoBuscado, 1)
-        actualizarEntornos()
+        const entornoLocalStorage = JSON.parse(localStorage.getItem('entornos'))
+        const entornoLocalStorageBuscado = entornoLocalStorage.findIndex(entorno => entorno.id === props.entorno.id)
+        entornoLocalStorage.splice(entornoLocalStorageBuscado, 1)
+        localStorage.setItem('entornos', JSON.stringify(entornoLocalStorage))
+        setEntorno(entornoLocalStorage)
     }
 
 

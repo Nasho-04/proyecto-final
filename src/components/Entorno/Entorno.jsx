@@ -8,17 +8,17 @@ import { useGlobalContext } from '../../GlobalContext'
 
 const Entorno = () => {
 
-    const { ENTORNO, handleToggleMenu, condicionMenu } = useGlobalContext()
+    const { handleToggleMenu, condicionMenu } = useGlobalContext()
 
     const { entorno_id, canal_id } = useParams()
-    const entorno = ENTORNO.find((entorno) => entorno.id == entorno_id)
+    const entorno = JSON.parse(localStorage.getItem('entornos')).find((entorno) => entorno.id == entorno_id)
     const canal = entorno.canales.find((canal) => canal.id == canal_id)
 
     const [canalActual, setCanalActual] = useState(canal)
 
     useEffect(() => {
         setCanalActual(canal)
-    }, [canal])
+    }, [canal_id])
 
 
     return (
@@ -28,11 +28,11 @@ const Entorno = () => {
                 <div className='contenedor-botones-header'>
                     <Link className='btn-salir' to={'/'}><span>Salir</span></Link>
                     <button className='btn-menu' onClick={handleToggleMenu}>{
-                    condicionMenu 
-                    ? <i class="bi bi-x-lg"></i> 
-                    : <i className="bi bi-list"></i>}
-                        
-                        </button>
+                        condicionMenu
+                            ? <i className="bi bi-x-lg"></i>
+                            : <i className="bi bi-list"></i>}
+
+                    </button>
                 </div>
             </header>
             <div className='contenedor-principal-entorno'>
@@ -43,7 +43,7 @@ const Entorno = () => {
                     <ContenedorCanales entorno={entorno} />
                 </aside>
                 <main className='parte-principal'>
-                    <Chat canal={canalActual}></Chat>
+                    <Chat canal={canalActual} entorno={entorno}></Chat>
                 </main>
             </div>
         </>

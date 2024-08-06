@@ -6,35 +6,46 @@
     justify-content: flex-start;
     align-items: flex-start;
     padding: 20px 20px;
-    gap: 7px;
+    gap: 10px;
 }
 
 .titulo-canales {
     width: 100%;
     height: 30px;
-    font-size: 24px;
+    font-size: 25px;
     font-weight: bold;
     text-align: center;
     color: #000000;
     border-bottom: #000 1px solid;
+
 }
 
 .lista-canales {
     width: 100%;
+    max-height: 75%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 5px;
     list-style: none;
+    text-wrap: balance;
+    overflow-wrap: break-word;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #5b8c9d transparent;
+}
+
+.lista-canales li {
+    width: 100%;
 }
 
 .link-canal {
     text-decoration: none;
     color: #000;
-    font-size: 18px;
+    font-size: 15px;
     width: 100%;
-    height: 30px;
+    min-height: 30px;
     display: flex;
     gap: 2px;
     border-radius: 5px;
@@ -47,11 +58,6 @@
     background-color: #5b8c9d;
 }
 
-.contenedor-canal:hover > .btn-eliminar-canal {
-    display: flex;
-    justify-content: center;
-    align-items: center
-}
 
 .link-canal::before {
     content: '#';
@@ -66,6 +72,8 @@
     padding: 5px;
     border-radius: 10px;
     border: 2px solid #000;
+    margin-top: 10px;
+    box-shadow: 0px 0px 3px 0px #000;
 }
 
 .form-crear-canal {
@@ -111,14 +119,17 @@
     color: rgb(167, 1, 1);
     font-size: 18px;
     cursor: pointer;
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: .4s;
     height: 100%;
     width: 25px;
+    border-radius: 6px;
 }
 
-.btn-eliminar-canal:hover {
-    background-color: #5b8c9d;
+.btn-eliminar-canal:hover{
+    color:rgb(230, 1, 1);
 }
 
 .btn-confirmar-canal {
@@ -127,10 +138,19 @@
     cursor: pointer;
 }
 
+.btn-confirmar-canal:hover {
+    border: 1px solid #fff;
+    box-shadow: 0px 0px 3px 0px #fff;
+}
+
 .btn-cancelar-canal {
     background-color: inherit;
     color: #000;
     cursor: pointer;
+}
+
+.btn-cancelar-canal:hover {
+    box-shadow: 0px 0px 3px 0px #000;
 }
 
 .btn-crear-canal {
@@ -160,6 +180,7 @@
     .lista-canales {
         width: 70%;
         margin-bottom: 15px;
+        scrollbar-color: #690257 transparent;
     }
 
     .link-canal {
@@ -215,8 +236,18 @@
         font-size: 15px;
     }
 
+    .btn-eliminar-canal {
+        font-size: 15px;
+    }
+
     .btn-crear-canal {
         font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .link-canal {
+        font-size: 20px;
     }
 }
 
@@ -227,6 +258,10 @@
     }
 
     .link-canal {
+        font-size: 22px;
+    }
+
+    .btn-eliminar-canal {
         font-size: 22px;
     }
 
@@ -261,12 +296,19 @@
         height: 40px !important;
         border-radius: 12px !important;
     }
+    .lista-canales {
+        gap: 10px;
+    }
 
     .btn-crear-canal {
         font-size: 22px;
     }
 
     .link-canal {
+        font-size: 26px;
+    }
+
+    .btn-eliminar-canal {
         font-size: 26px;
     }
 

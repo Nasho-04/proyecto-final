@@ -12,7 +12,7 @@ export const GlobalContextProvider = ({ children }) => {
     const entornos = ENTORNOS
 
     const [condicionBtn, setCondicionBtn] = useState(false)
-    const [ENTORNO, setEntorno] = useState(entornos)
+    const [ENTORNO, setEntorno] = useState(obtenerEntornos())
     const [inputValue, setInputValue] = useState('')
     const [condicionMenu, setCondicionMenu] = useState(false)
 
@@ -28,7 +28,10 @@ export const GlobalContextProvider = ({ children }) => {
                 }
             ]
         }
-        setEntorno([...ENTORNO, nuevoEntorno])
+        const entornosLocalStorage = JSON.parse(localStorage.getItem('entornos'))
+        entornosLocalStorage.push(nuevoEntorno)
+        localStorage.setItem('entornos', JSON.stringify(entornosLocalStorage))
+        setEntorno(entornosLocalStorage)
     }
 
 

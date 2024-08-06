@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -14,6 +16,7 @@ h1 {
     width: 50%;
     text-align: center;
     text-shadow: 0px 0px 10px #000;
+    font-family: 'Roboto', sans-serif;
 }
 
 .contenedor {
@@ -37,7 +40,7 @@ h1 {
     gap: 10px;
     overflow-y: auto;
     background-color: inherit;
-    box-shadow: 0px 0px 10px 0px #000;
+    box-shadow: 0px 0px 10px 0px #fff;
     scrollbar-width: thin;
     scrollbar-color: #460066 transparent;
 }
@@ -55,9 +58,9 @@ h1 {
     width: 65%;
     margin-left: 15px;
     text-align: left;
-    opacity: 0.8;
-    color: #ccc;
-    text-shadow: 0px 0px 10px #fff;
+    opacity: .8;
+    color: #eee;
+    text-shadow: 0px 0px 20px #fff;
 }
 
 .btn-crear-entorno {
@@ -74,8 +77,13 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
+    font-size: 32px;
     box-shadow: 0px 0px 10px 0px #000;
+}
+
+.btn-crear-entorno:hover {
+    box-shadow: 0px 0px 20px 0px #fff;
+    transition: 0.3s;
 }
 
 
@@ -196,6 +204,5 @@ h1 {
     .subtitulo {
         font-size: 30px;
         width: 90%;
-        text-shadow: 0px 0px 20px #fff;
     }
 }

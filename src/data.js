@@ -39,7 +39,7 @@ const ENTORNOS = [
                         autor: 'Marcos',
                         id: 3,
                         texto: 'dale, yo estoy libre'
-                    },
+                    }
                 ]
             }
         ]
@@ -63,9 +63,9 @@ const ENTORNOS = [
                         texto: 'sii dale, me copa la idea'
                     }
                 ]
-            },
+            }
         ]
-    },
+    }
 ]
 
 

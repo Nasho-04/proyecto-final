@@ -14,6 +14,10 @@
     height: 60px;
 }
 
+.carta-entorno:hover {
+    border: 2px solid #fff;
+}
+
 .botones-carta-entorno {
     display: flex;
     flex-direction: row;
@@ -36,6 +40,11 @@
     align-items: center;
     box-shadow: 0px 0px 4px 0px #000;
     cursor: pointer;
+}
+
+.btn-eliminar-entorno:hover {
+    background-color: RGB(250, 1, 1);
+    border: 2px solid #000;
 }
 
 .info-carta-entorno {
@@ -62,6 +71,12 @@
     justify-content: center;
     align-items: center;
     box-shadow: 0px 0px 4px 0px #000;
+}
+
+.btn-entrar:hover {
+    border: 2px solid #fff;
+    box-shadow: 0px 0px 8px 0px #fff;
+    transition: .1s;
 }
 
 .icono-carta-entorno {
