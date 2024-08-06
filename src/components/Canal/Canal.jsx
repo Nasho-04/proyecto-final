@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 
 const Canal = (props) => {
 
-    const {ENTORNO, actualizarEntornos} = useGlobalContext()
+    const {ENTORNO, actualizarEntornos, condicionMenu, setCondicionMenu} = useGlobalContext()
 
     const navigate = useNavigate()
 
@@ -21,8 +21,14 @@ const Canal = (props) => {
         navigate(`/`)
     }
 
+    const handleCerrarMenu = () => {
+        if (condicionMenu) {
+            setCondicionMenu(!condicionMenu)
+        }
+    }
+
     return (
-        <div className='contenedor-canal'>
+        <div onClick={handleCerrarMenu} className='contenedor-canal'>
             <Link key={canal.id} className='link-canal' to={`/entorno/${entorno.id}/${canal.id}`}><li key={canal.id}>{canal.nombre}</li></Link>
             {canal.nombre === 'General' 
             ? <></>

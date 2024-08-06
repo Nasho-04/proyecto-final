@@ -76,9 +76,15 @@
     display: none;
 }
 
+@media screen and (min-width: 769px) {
+    .contenedor-menu-desplegable {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .barra-lateral {
-        display: none;
+        display: none !important;
     }
 
     .parte-principal {

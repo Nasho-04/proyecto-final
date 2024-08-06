@@ -36,8 +36,10 @@ const Entorno = () => {
                 </div>
             </header>
             <div className='contenedor-principal-entorno'>
-                <div className='menu-desplegable' style={{ display: condicionMenu ? 'block' : 'none' }}>
-                    <ContenedorCanales entorno={entorno}></ContenedorCanales>
+                <div className='contenedor-menu-desplegable'>
+                    <div className='menu-desplegable' style={{ display: condicionMenu ? 'block' : 'none' }}>
+                        <ContenedorCanales entorno={entorno}></ContenedorCanales>
+                    </div>
                 </div>
                 <aside className='barra-lateral'>
                     <ContenedorCanales entorno={entorno} />

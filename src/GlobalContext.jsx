@@ -62,7 +62,8 @@ export const GlobalContextProvider = ({ children }) => {
                 agregarEntorno: agregarEntorno,
                 condicionMenu: condicionMenu,
                 handleToggleMenu: handleToggleMenu,
-                actualizarEntornos: actualizarEntornos
+                actualizarEntornos: actualizarEntornos,
+                setCondicionMenu: setCondicionMenu
             }
         }>
             {children}
