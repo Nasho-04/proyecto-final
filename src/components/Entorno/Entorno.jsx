@@ -27,7 +27,7 @@ const Entorno = () => {
                 <h3 className='nombre-entorno-header'>{entorno.nombre}</h3>
                 <div className='contenedor-botones-header'>
                     <Link className='btn-salir' to={'/'}><span>Salir</span></Link>
-                    <button className='btn-menu' onClick={handleToggleMenu}>{
+                    <button className='btn-menu' onClick={handleToggleMenu} >{
                         condicionMenu
                             ? <i className="bi bi-x-lg"></i>
                             : <i className="bi bi-list"></i>}

@@ -8,7 +8,7 @@ import Canal from '../Canal/Canal'
 import { obtenerEntornos } from '../../data'
 
 const ContenedorCanales = (props) => {
-    const { condicionBtn, setCondicionBtn, inputValue, setInputValue, handleToggleCondicion, ENTORNO, actualizarEntornos } = useGlobalContext()
+    const { condicionBtn, handleToggleCondicion, inputValue, setInputValue, ENTORNO, actualizarEntornos } = useGlobalContext()
     const { entorno } = props
 
     const [canales, setCanales] = useState(entorno.canales)

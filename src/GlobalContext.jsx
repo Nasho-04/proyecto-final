@@ -41,17 +41,21 @@ export const GlobalContextProvider = ({ children }) => {
         setCondicionBtn(!condicionBtn)
     }
 
+
     const handleToggleMenu = () => {
         setCondicionMenu(!condicionMenu)
     }
+
 
     const actualizarEntornos = () => {
         setEntorno([...ENTORNO])
     }
 
+
     const handleToggleMenuCanal = () => {
         setCondicionEliminarCanal(!condicionEliminarCanal)
     }
+
 
     const handleToggleMenuEntorno = () => {
         setCondicionEliminarEntorno(!condicionEliminarEntorno)
@@ -64,11 +68,11 @@ export const GlobalContextProvider = ({ children }) => {
                 entornos: entornos,
                 condicionBtn: condicionBtn,
                 setCondicionBtn: setCondicionBtn,
+                handleToggleCondicion: handleToggleCondicion,
                 ENTORNO: ENTORNO,
                 setEntorno: setEntorno,
                 inputValue: inputValue,
                 setInputValue: setInputValue,
-                handleToggleCondicion: handleToggleCondicion,
                 agregarEntorno: agregarEntorno,
                 condicionMenu: condicionMenu,
                 handleToggleMenu: handleToggleMenu,
