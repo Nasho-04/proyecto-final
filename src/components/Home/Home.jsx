@@ -4,19 +4,20 @@ import { useGlobalContext } from '../../GlobalContext'
 import CartaEntorno from '../CartaEntorno/CartaEntorno'
 import { Link } from 'react-router-dom'
 
-const Home = () => { 
-    const { setEntorno, ENTORNO } = useGlobalContext()
+const Home = () => {
+    const { setEntorno, ENTORNO, handleToggleMenuEntorno, condicionEliminarEntorno } = useGlobalContext()
 
 
     useEffect(() => {
         setEntorno(ENTORNO)
-    }, [ENTORNO]) 
+    }, [ENTORNO])
 
     const entornosStorage = JSON.parse(localStorage.getItem('entornos'))
 
 
     return (
         <div className='contenedor'>
+            
             <h1>Bienvenido a Sheerio</h1>
             <div className='contenedor-entornos'>
                 <span className='subtitulo'>Entornos de trabajo</span>

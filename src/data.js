@@ -33,7 +33,7 @@ const ENTORNOS = [
                     {
                         autor: 'Julian',
                         id: 2,
-                        texto: 'nos juntamos ete finde en mi casa?'
+                        texto: 'nos juntamos este finde en mi casa?'
                     },
                     {
                         autor: 'Marcos',

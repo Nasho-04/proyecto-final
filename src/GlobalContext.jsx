@@ -15,6 +15,8 @@ export const GlobalContextProvider = ({ children }) => {
     const [ENTORNO, setEntorno] = useState(obtenerEntornos())
     const [inputValue, setInputValue] = useState('')
     const [condicionMenu, setCondicionMenu] = useState(false)
+    const [condicionEliminarEntorno, setCondicionEliminarEntorno] = useState(false)
+    const [condicionEliminarCanal, setCondicionEliminarCanal] = useState(false)
 
     const agregarEntorno = (nombre) => {
         const nuevoEntorno = {
@@ -47,6 +49,14 @@ export const GlobalContextProvider = ({ children }) => {
         setEntorno([...ENTORNO])
     }
 
+    const handleToggleMenuCanal = () => {
+        setCondicionEliminarCanal(!condicionEliminarCanal)
+    }
+
+    const handleToggleMenuEntorno = () => {
+        setCondicionEliminarEntorno(!condicionEliminarEntorno)
+    }
+
 
     return (
         <GlobalContext.Provider value={
@@ -63,7 +73,11 @@ export const GlobalContextProvider = ({ children }) => {
                 condicionMenu: condicionMenu,
                 handleToggleMenu: handleToggleMenu,
                 actualizarEntornos: actualizarEntornos,
-                setCondicionMenu: setCondicionMenu
+                setCondicionMenu: setCondicionMenu,
+                handleToggleMenuCanal: handleToggleMenuCanal,
+                handleToggleMenuEntorno: handleToggleMenuEntorno,
+                condicionEliminarCanal: condicionEliminarCanal,
+                condicionEliminarEntorno: condicionEliminarEntorno
             }
         }>
             {children}
