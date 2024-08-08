@@ -159,8 +159,11 @@
     }
 
     .input-entorno-nuevo {
-        height: 30px;
+        height: 40px;
         font-size: 12px;
+        border-radius: 5px;
+        padding-top: 5px;
+        padding-bottom: 5px;
     }
 
     .btn-cancelar-entorno {
