@@ -43,6 +43,7 @@
 .menu-entorno p {
     font-size: 22px;
     text-shadow: 0px 0px 10px #000;
+    text-align: center;
 }
 
 .contenedor-btn-menu-entorno {
