@@ -1,14 +1,12 @@
 import React, { useEffect } from 'react'
 import './ContenedorCanales.css'
-import { Link, useParams } from 'react-router-dom'
 import { useState } from 'react'
 import { useGlobalContext } from '../../GlobalContext'
 import { v4 as uuid } from 'uuid';
 import Canal from '../Canal/Canal'
-import { obtenerEntornos } from '../../data'
 
 const ContenedorCanales = (props) => {
-    const { condicionBtn, handleToggleCondicion, inputValue, setInputValue, ENTORNO, actualizarEntornos } = useGlobalContext()
+    const { condicionBtn, setCondicionBtn,  handleToggleCondicion, inputValue, setInputValue, ENTORNO, actualizarEntornos } = useGlobalContext()
     const { entorno } = props
 
     const [canales, setCanales] = useState(entorno.canales)

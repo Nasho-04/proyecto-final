@@ -1,8 +1,7 @@
 import { createContext, useContext } from "react";
 import { useState } from "react";
-import { useEffect } from "react";
 import ENTORNOS from "./data";
-import { obtenerEntornos, obtenerCanales } from "./data";
+import { obtenerEntornos } from "./data";
 import {v4 as uuid} from 'uuid';
 
 const GlobalContext = createContext();

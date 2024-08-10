@@ -5,7 +5,7 @@ import CartaEntorno from '../CartaEntorno/CartaEntorno'
 import { Link } from 'react-router-dom'
 
 const Home = () => {
-    const { setEntorno, ENTORNO, handleToggleMenuEntorno, condicionEliminarEntorno } = useGlobalContext()
+    const { setEntorno, ENTORNO } = useGlobalContext()
 
 
     useEffect(() => {

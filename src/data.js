@@ -68,7 +68,6 @@ const ENTORNOS = [
     }
 ]
 
-
 export const obtenerEntornos = () => {
     if (localStorage.getItem('entornos')) {
         return JSON.parse(localStorage.getItem('entornos'))
@@ -76,10 +75,6 @@ export const obtenerEntornos = () => {
         localStorage.setItem('entornos', JSON.stringify(ENTORNOS))
         return JSON.parse(localStorage.getItem('entornos'))
     }
-}
-
-export const obtenerCanales = (entorno) => {
-    return entorno.canales
 }
 
 export default ENTORNOS

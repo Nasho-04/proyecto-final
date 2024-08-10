@@ -6,7 +6,7 @@ import './Canal.css'
 
 const Canal = (props) => {
 
-    const { ENTORNO, actualizarEntornos, condicionMenu, setCondicionMenu, handleToggleMenuCanal, condicionEliminarCanal } = useGlobalContext()
+    const { ENTORNO, actualizarEntornos, condicionMenu, setCondicionMenu, handleToggleMenuCanal, condicionEliminarCanal, handleToggleMenu } = useGlobalContext()
 
     const navigate = useNavigate()
 
@@ -19,8 +19,9 @@ const Canal = (props) => {
         entornoStorage.canales = entorno.canales
         actualizarEntornos()
         localStorage.setItem('entornos', JSON.stringify(ENTORNO))
-        navigate(`/`)
+        navigate(`/entorno/${entorno.id}/${entorno.canales[0].id}`)
         handleToggleMenuCanal()
+        handleToggleMenu()
     }
 
     const handleCerrarMenu = () => {
