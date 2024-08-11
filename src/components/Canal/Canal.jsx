@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { useGlobalContext } from '../../GlobalContext'
 import { useNavigate } from 'react-router-dom'
 import './Canal.css' 
@@ -9,6 +9,7 @@ const Canal = (props) => {
     const { ENTORNO, actualizarEntornos, condicionMenu, setCondicionMenu, handleToggleMenuCanal, condicionEliminarCanal, handleToggleMenu } = useGlobalContext()
 
     const navigate = useNavigate()
+    const { canal_id} = useParams()
 
     const { canal, entorno } = props
 
@@ -41,7 +42,7 @@ const Canal = (props) => {
                     </div>
                 </div>
             </div>
-            <Link key={canal.id} className='link-canal' to={`/entorno/${entorno.id}/${canal.id}`}>
+            <Link key={canal.id} className={canal_id == canal.id ? 'link-canal active' : 'link-canal'} to={`/entorno/${entorno.id}/${canal.id}`}>
             <li onClick={handleCerrarMenu} key={canal.id}>{canal.nombre}</li>
             {canal.nombre === 'General'
                 ? <></>
