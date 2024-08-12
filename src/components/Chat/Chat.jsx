@@ -38,15 +38,16 @@ const Chat = (props) => {
         setMensajes(canal.mensajes), [canal.mensajes]
     })
 
-
     return (
         <div className='chat'> {
-            <div className='contenedor-mensajes'>
-                {mensajes.map((mensaje) => (
-                    <Mensaje key={mensaje.id} autor={mensaje.autor} texto={mensaje.texto}
-                    ></Mensaje>
-                ))}
-            </div>}
+            mensajes.length > 0
+            ? <div className='contenedor-mensajes'>
+            {mensajes.map((mensaje) => (
+                <Mensaje key={mensaje.id} autor={mensaje.autor} texto={mensaje.texto}
+                ></Mensaje>
+            ))}
+        </div>
+        : <div className='contenedor-vacio'><p className='aviso-mensajes-vacio'>Aún no hay mensajes...</p></div>}
             <form onSubmit={handleSubmitMensaje} className='contenedor-input-mensajes'>
                 <input type="text" name='mensaje' id='mensaje'
                     placeholder='Escribe un mensaje' value={inputValue} onChange={(e) => setInputValue(e.target.value)} />

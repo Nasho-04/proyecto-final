@@ -20,6 +20,25 @@
     flex-grow: 1;
 }
 
+.contenedor-vacio {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: #690257;
+    flex-grow: 1;
+    color: #fefefe;
+    text-align: center;
+}
+
+.aviso-mensajes-vacio {
+    opacity: .5;
+    font-size: 35px;
+    text-shadow: 0px 0px 10px #fff;
+}
+
 
 .contenedor-input-mensajes{
     width: 100%;
@@ -129,6 +148,10 @@
     .contenedor-btn-enviar {
         left: 81%;
     }
+
+    .aviso-mensajes-vacio {
+        font-size: 25px;
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -163,6 +186,10 @@
         height: 50px;
         left: 87%;
     }
+
+    .aviso-mensajes-vacio {
+        font-size: 40px;
+    }
 }
 
 @media screen and (min-width: 1800px) {
@@ -183,5 +210,9 @@
 
     .btn-enviar-mensaje {
         font-size: 25px;
+    }
+
+    .aviso-mensajes-vacio {
+        font-size: 50px;
     }
 }
