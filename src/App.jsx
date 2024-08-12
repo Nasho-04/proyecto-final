@@ -9,7 +9,6 @@ function App() {
     <>
       <Routes>
         <Route path='/' element={<Home></Home>}/>
-        <Route path='/entorno/:entorno_id/' element={<Entorno></Entorno>}/>
         <Route path='/entorno/:entorno_id/:canal_id' element={<Entorno></Entorno>}/>
         <Route path='/entorno/nuevo' element={<EntornoNuevoForm></EntornoNuevoForm>}/>
       </Routes>

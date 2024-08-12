@@ -24,7 +24,7 @@ const EntornoNuevoForm = () => {
             <div className='contenedor-formulario'>
                 <h3 className='titulo-entorno-nuevo-form'>Crea un nuevo entorno</h3>
                 <form className='form-entorno-nuevo' onSubmit={handleSubmitEntorno}>
-                    <input className='input-entorno-nuevo' type="text" placeholder="Nombre del nuevo entorno" value={inputValue} onChange={(e) => setInputValue(e.target.value)}  />
+                    <input className='input-entorno-nuevo' type="text" maxLength={15} placeholder="Nombre del nuevo entorno" value={inputValue} onChange={(e) => setInputValue(e.target.value)}  />
                     <div className='contenedor-botones-form-entorno'>
                         <button className='btn-submit-entorno' type="submit">Crear entorno</button>
                         <Link to={'/'} className='link-cancelar-entorno'><button className='btn-cancelar-entorno'>Cancelar</button></Link>
