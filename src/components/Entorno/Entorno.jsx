@@ -31,7 +31,6 @@ const Entorno = () => {
                         condicionMenu
                             ? <i className="bi bi-x-lg"></i>
                             : <i className="bi bi-list"></i>}
-
                     </button>
                 </div>
             </header>

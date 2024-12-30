@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #690257;
+    background-color: #121212;
     color: #efefef;
 }
 
@@ -15,7 +15,6 @@ h1 {
     font-size: 50px;
     width: 50%;
     text-align: center;
-    text-shadow: 0px 0px 10px #000;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -30,9 +29,9 @@ h1 {
 }
 
 .lista-entornos {
-    border: 1px solid #fff;
     border-radius: 16px;
     padding: 10px 15px;
+    border: 2px solid #aaa;
     width: 65%;
     height: 350px;
     display: flex;
@@ -40,9 +39,8 @@ h1 {
     gap: 10px;
     overflow-y: auto;
     background-color: inherit;
-    box-shadow: 0px 0px 10px 0px #fff;
     scrollbar-width: thin;
-    scrollbar-color: #460066 transparent;
+    scrollbar-color: #690257 transparent;
 }
 
 .contenedor-entornos {
@@ -59,30 +57,32 @@ h1 {
     margin-left: 15px;
     text-align: left;
     opacity: .8;
-    color: #eee;
-    text-shadow: 0px 0px 20px #fff;
+    color: #fefefe;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .btn-crear-entorno {
     width: 65%;
     height: 70px;
     border-radius: 10px;
-    border: solid 1px #ffffff;
-    background-color: #460066;
+    border: 2px solid #aaa;
+    background-color: #3F1144;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
-    color: #fefefe;
+    color: #dfdfdf;
     margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 32px;
+    font-weight: bold;
     box-shadow: 0px 0px 10px 0px #000;
 }
 
 .btn-crear-entorno:hover {
-    box-shadow: 0px 0px 20px 0px #fff;
+    box-shadow: 0px 0px 10px 0px #fff;
     transition: 0.3s;
 }
 

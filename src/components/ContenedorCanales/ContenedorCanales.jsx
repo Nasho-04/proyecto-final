@@ -6,7 +6,7 @@ import { v4 as uuid } from 'uuid';
 import Canal from '../Canal/Canal'
 
 const ContenedorCanales = (props) => {
-    const { condicionBtn, setCondicionBtn,  handleToggleCondicion, inputValue, setInputValue, ENTORNO, actualizarEntornos } = useGlobalContext()
+    const { condicionBtn, setCondicionBtn, handleToggleCondicion, inputValue, setInputValue, ENTORNO, actualizarEntornos } = useGlobalContext()
     const { entorno } = props
 
     const [canales, setCanales] = useState(entorno.canales)
@@ -41,14 +41,15 @@ const ContenedorCanales = (props) => {
                     <Canal key={canal.id} canal={canal} entorno={entorno} />
                 ))}
             </ul>
-            <div className='contenedor-crear-canal'>{condicionBtn
+            {condicionBtn
                 ? <form className='form-crear-canal' onSubmit={handleSubmitCanales}>
-                    <input type="text" name='crear-canal' id='crear-canal' maxLength={15} onChange={(e) => setInputValue(e.target.value)} value={inputValue} placeholder='Nombre del canal' />
-                    <button type='submit' className='btn-confirmar-canal'>Confirmar</button>
-                    <button className='btn-cancelar-canal' onClick={handleToggleCondicion}>Cancelar</button>
+                    <fieldset className='menu-crear-canal'>
+                        <input type="text" name='crear-canal' id='crear-canal' maxLength={15} onChange={(e) => setInputValue(e.target.value)} value={inputValue} placeholder='Nombre del canal' />
+                        <button type='submit' className='btn-confirmar-canal'>Confirmar</button>
+                        <button className='btn-cancelar-canal' onClick={handleToggleCondicion}>Cancelar</button>
+                    </fieldset>
                 </form>
-                : <button className='btn-crear-canal' onClick={handleToggleCondicion}>Crear canal</button>}
-            </div>
+                : <div className='btn-crear-canal' onClick={handleToggleCondicion}> <span>+</span> Crear canal</div>}
         </div>
     )
 }

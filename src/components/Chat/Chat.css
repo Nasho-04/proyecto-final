@@ -13,21 +13,21 @@
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    background-color: #690257;
-    gap: 10px;
+    background-color: #1A1D21;
+    gap: 1px;
     scrollbar-width: thin;
-    scrollbar-color: #73a3b3 transparent;
+    scrollbar-color: #797C7E transparent;
     flex-grow: 1;
 }
 
 .contenedor-vacio {
     width: 100%;
-    height: 80%;
+    height: 85%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1rem;
-    background-color: #690257;
+    background-color: #1A1D21;
     flex-grow: 1;
     color: #fefefe;
     text-align: center;
@@ -42,46 +42,40 @@
 
 .contenedor-input-mensajes{
     width: 100%;
-    height: 20%;
+    height: 15%;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
-    padding: 1rem;
+    gap: 5px;
+    padding: 5px 1rem;
     position: relative;
-    background-color: #460066;
-    border-top: 1px solid #fefefe;
+    background-color: #1A1D21;
 }
 
 .contenedor-input-mensajes input {
-    width: 90%;
+    width: 95%;
     height: 70%;
-    background-color: #690257;
-    border-radius: 10px;
-    border: 1px solid #fefefe;
+    background-color: #222529;
+    border-radius: 4px;
+    border: 1.5px solid #565856;
     box-shadow: 0px 0px 2px 0px #000;
-    color: #fefefe;
+    color: #aeaeae;
     font-size: 20px;
-    padding: 0 200px 0 10px;
+    padding: 0 10px;
 }
 
 .contenedor-input-mensajes input:focus {
     outline: none;
-    border: 2px solid #fefefe;
+    border: 2px solid #aeaeae;
 }
 
 .contenedor-input-mensajes input::placeholder {
-    color: #bcbcbc;
+    color: #bcbcbc5a;
 }
 
 .contenedor-btn-enviar{
-    position: absolute;
-    left: 85%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    border-left: 1px solid #fefefe;
-    width: 150px;
-    height: 50px;
-    max-height: 30%;
+    width: 5%;
+    height: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,20 +84,20 @@
 
 .btn-enviar-mensaje{
     height: 100%;
-    width: 75%;
-    border-radius: 10px;
-    background-color: #460066;
-    color: #fefefe;
+    width: 100%;
+    border-radius: 4px;
+    color: #bcbcbc5a;
     outline: none;
-    border: 1px solid #fefefe;
+    border: none;
     font-size: 20px;
-    font-weight: bold;
-    box-shadow: 0px 0px 2px 0px #000;
+    background-color: #222529;
+    border: 1.5px solid #565856;
 }
 
 .btn-enviar-mensaje:hover {
     cursor: pointer;
-    border: 2px solid #fefefe;
+    border: 2px solid #aeaeae;
+    color: #aeaeae;
 }
 
 @media screen and (max-width: 1000px) {
@@ -117,12 +111,11 @@
     }
 
     .contenedor-btn-enviar {
-        width: 100px;
-        height: 30px;
+        width: 50px;
     }
 
     .btn-enviar-mensaje {
-        font-size: 15px;
+        font-size: 20px;
     }
 }
 
@@ -166,7 +159,6 @@
     .contenedor-btn-enviar {
         left: 79%;
         width: 80px;
-        height: 25px;
     }
 
     .btn-enviar-mensaje {

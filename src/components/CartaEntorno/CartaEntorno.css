@@ -2,7 +2,6 @@
 
 .carta-entorno {
     border-radius: 16px;
-    background-color: #73a3b3;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -28,21 +27,21 @@
 }
 
 .menu-entorno {
-    width: 50%;
-    height: 50%;
+    width: 70%;
+    height: fit-content;
     border-radius: 16px;
     border: 1px solid #fff;
-    background-color: #690257;
+    background-color: #121212;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    box-shadow: 0px 0px 10px 0px #fff;
+    gap: 30px;
+    padding: 50px 30px;
 }
 
 .menu-entorno p {
-    font-size: 22px;
-    text-shadow: 0px 0px 10px #000;
+    font-size: 30px;
     text-align: center;
 }
 
@@ -54,7 +53,7 @@
 .btn-confirmar-eliminar-entorno {
     background-color: #460066;
     color: #efefef;
-    border: 2px solid #fff;
+    border: 1px solid #fff;
     padding: 10px 20px;
     border-radius: 10px;
     font-size: 18px;
@@ -62,10 +61,11 @@
     box-shadow: 0px 0px 10px 0px #000;
     width: 150px;
     height: 50px;
+    font-weight: bold;
 }
 
 .btn-confirmar-eliminar-entorno:hover {
-    box-shadow: 0px 0px 10px 0px #fff;
+    box-shadow: 0px 0px 5px 0px #fff;
     transform: scale(1.1);
     transition: .3s;
 }
@@ -73,13 +73,14 @@
 .btn-cancelar-eliminar-entorno {
     background-color: inherit;
     color: #efefef;
-    border: 2px solid #fff;
+    border: 1px solid #fff;
     padding: 10px 20px;
     border-radius: 10px;
     font-size: 18px;
     cursor: pointer;
     width: 150px;
     height: 50px;
+    font-weight: bold;
 }
 
 .btn-cancelar-eliminar-entorno:hover {
@@ -105,7 +106,7 @@
     height: 40px;
     border-radius: 10px;
     border: solid 1px #000;
-    color: #000000;
+    color: #cdcdcd;
     font-size: 22px;
     font-weight: 700;
     background-color: rgb(167, 1, 1);
@@ -117,8 +118,8 @@
 }
 
 .btn-eliminar-entorno:hover {
-    background-color: RGB(250, 1, 1);
-    border: 2px solid #000;
+    border: 1px solid #fff;
+    transition: .1s;
 }
 
 .info-carta-entorno {
@@ -128,28 +129,28 @@
     gap: 15px;
     height: 60px;
     align-items: center;
-    color: #000;
+    color: #cdcdcd;
 }
 
 .btn-entrar {
     width: 100px;
     height: 40px;
     border-radius: 10px;
-    border: solid 1px #000;
-    color: #000000;
+    border: 1px solid #000;
+    color: #fefefe;
     font-size: 20px;
     font-weight: 700;
-    background-color: #be58cf;
+    background-color: #3F1144;
     text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0px 0px 4px 0px #000;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .btn-entrar:hover {
-    border: 2px solid #fff;
-    box-shadow: 0px 0px 8px 0px #fff;
+    border: 1px solid #fff;
     transition: .1s;
 }
 
@@ -162,7 +163,6 @@
 @media screen and (max-width: 800px) {
     .menu-entorno {
         width: 80%;
-        height: 40%;
     }
 }
 
@@ -240,7 +240,7 @@
     }
 
     .menu-entorno p {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .btn-cancelar-eliminar-entorno, .btn-confirmar-eliminar-entorno {
@@ -257,7 +257,7 @@
     }
 
     .menu-entorno p {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .contenedor-btn-menu-entorno {
