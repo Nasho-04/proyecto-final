@@ -8,7 +8,7 @@
 
 body {
     background-color: #121212;
-    color: #efefef;
+    color: #ffff;
 }
 
 h1 {
@@ -16,6 +16,7 @@ h1 {
     width: 50%;
     text-align: center;
     font-family: 'Roboto', sans-serif;
+    text-shadow: 2px 2px 7px #fff9;
 }
 
 .contenedor {
@@ -56,8 +57,7 @@ h1 {
     width: 65%;
     margin-left: 15px;
     text-align: left;
-    opacity: .8;
-    color: #fefefe;
+    color: #ededed;
     font-weight: bold;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }

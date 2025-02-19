@@ -11,6 +11,7 @@
     border: 1px solid #000;
     box-shadow: 0px 0px 4px 0px #000;
     height: 60px;
+    transition: .2s;
 }
 
 .contenedor-menu-entorno {
@@ -72,7 +73,7 @@
 
 .btn-cancelar-eliminar-entorno {
     background-color: inherit;
-    color: #efefef;
+    color: #fff;
     border: 1px solid #fff;
     padding: 10px 20px;
     border-radius: 10px;
@@ -106,7 +107,7 @@
     height: 40px;
     border-radius: 10px;
     border: solid 1px #000;
-    color: #cdcdcd;
+    color: #efefef;
     font-size: 22px;
     font-weight: 700;
     background-color: rgb(167, 1, 1);
@@ -115,11 +116,13 @@
     align-items: center;
     box-shadow: 0px 0px 4px 0px #000;
     cursor: pointer;
+    text-shadow: 2px 2px 6px #000;
+    border-radius: 16px;
 }
 
 .btn-eliminar-entorno:hover {
     border: 1px solid #fff;
-    transition: .1s;
+    transition: .3s;
 }
 
 .info-carta-entorno {
@@ -129,7 +132,7 @@
     gap: 15px;
     height: 60px;
     align-items: center;
-    color: #cdcdcd;
+    color: #efefef;
 }
 
 .btn-entrar {
@@ -147,11 +150,12 @@
     align-items: center;
     box-shadow: 0px 0px 4px 0px #000;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 16px;
 }
 
 .btn-entrar:hover {
     border: 1px solid #fff;
-    transition: .1s;
+    transition: .3s;
 }
 
 .icono-carta-entorno {
